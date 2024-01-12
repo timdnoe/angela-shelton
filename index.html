@@ -7,19 +7,18 @@
   <h1 style="text-align:center">
    Angela Shelton Search
   </h1>
-  <br>
   <div class="search">
 
-          <input type="text"
-                 placeholder=" Enter your search here..."
-                 name="search" id="searchInput">
-          <button onclick="performSearch()" id="search">
-              <i class="fa fa-search"
-                 style="font-size: 18px;">
-              </i>
-          </button>
+    <input type="text"
+           placeholder=" Enter your search here..."
+           name="search" id="searchInput">
+    <button onclick="performSearch()" id="search">
+        <i class="fa fa-search"
+           style="font-size: 18px;">
+        </i>
+    </button>
 
-  </div>
+</div>
   <button onclick="showSettings()" style="display:none">
    Settings
   </button>
@@ -167,29 +166,30 @@
   100% { transform: rotate(360deg); }
 }
 
-  /* styling search bar */
+    /* styling search bar */
     .search input[type=text]{
         width:300px;
         height:25px;
         border-radius:25px;
-        border: none;
+        border: 2;
     }
          
     .search{
-        float:right;
+        float:left;
         margin:7px;
     }
          
     .search button{
-        background-color: #0074D9;
-        color: #f2f2f2;
-        float: right;
+        background-color: #FFF;
+        color: #000;
+        float: left;
         padding: 5px 10px;
         margin-right: 16px;
         font-size: 12px;
         border: none;
         cursor: pointer;
     } 
+
  </style>
  <script>
   // Function to perform search
@@ -197,9 +197,7 @@ function performSearch() {
   // Get the search term from the input field
   const searchTerm = document.getElementById('searchInput').value;
   var sourceObject = {
-    ACIM: document.getElementById('Angela_Shelton').checked,
-    Bible: document.getElementById('Bible').checked,
-    Dao: document.getElementById('Dao').checked
+    ACIM: document.getElementById('Angela_Shelton').checked
   }
   var sources = addSources(sourceObject)
   const numberResults = document.getElementById('numberResults').value
